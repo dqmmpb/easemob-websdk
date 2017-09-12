@@ -53,9 +53,7 @@
   "bugs": {
     "url": "https://github.com/easemob/web-im/issues"
   },
-  "dependencies": {
-    "underscore": "^1.8.3"
-  },
+  "dependencies": {},
   "description": "Easemob IM websdk",
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -69,6 +67,8 @@
     "gulp-sourcemaps": "^2.2.0",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
+    "strophe.js": "^1.2.14",
+    "underscore": "^1.8.3",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "webpack-stream": "^3.2.0"

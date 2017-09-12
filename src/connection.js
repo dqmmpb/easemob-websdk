@@ -6,13 +6,14 @@ var _message = _msg._msg;
 var _msgHash = {};
 var Queue = require('./queue').Queue;
 var CryptoJS = require('crypto-js');
+var Strophe = require('strophe.js').Strophe;
 var _ = require('underscore');
 var stropheConn = null;
 
 window.URL = window.URL || window.webkitURL || window.mozURL || window.msURL;
 
 if (window.XDomainRequest) {
-    // not support ie8 send is not a function , canot 
+    // not support ie8 send is not a function , canot
     // case send is object, doesn't has a attr of call
     // XDomainRequest.prototype.oldsend = XDomainRequest.prototype.send;
     // XDomainRequest.prototype.send = function () {
@@ -836,7 +837,7 @@ connection.prototype.heartBeat = function (forcing) {
         type: 'normal'
     };
     this.heartBeatID = setInterval(function () {
-        // fix: do heartbeat only when websocket 
+        // fix: do heartbeat only when websocket
         _utils.isSupportWss && me.ping(options);
     }, this.heartBeatWait);
 };
